@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Home</title>
+    <link rel="icon" href="static\images\logo.png">
+
+    <style>
+        body {
+            background-color: #d4a3ae;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        center {
+            text-align: left;
+        }
+
+        table {
+            max-width: 400px;
+            width: 100%;
+            border-collapse: collapse;
+            border: none
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        input {
+            width: calc(100% - 16px);
+            padding: 8px;
+            margin-left: 8px;
+            box-sizing: border-box;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <center>
+
+        <h1> River Water Quality Forecasting </h1><br>
+        
+        <form action="/predict" method="post">
+        
+            <table>
+                <tr>
+                    <th><label for="in_volume">in_volume:</label></th>
+                    <td><input type="text" name="in_volume" required placeholder="Enter in_volume"></td>
+                </tr>
+    
+                <tr>
+                    <th><label for="in_flowrate">in_flowrate:</label></th>
+                    <td><input type="text" name="in_flowrate" required placeholder="Enter in_flowrate"></td>
+                </tr>
+    
+                <tr>
+                    <th><label for="in_Pressure">in_Pressure:</label></th>
+                    <td><input type="text" name="in_Pressure" placeholder="Enter in_Pressure"></td>
+                </tr>
+    
+                <tr>
+                    <th><label for="out_Volume">out_Volume:</label></th>
+                    <td><input type="text" name="out_Volume" required placeholder="Enter out_Volume"></td>
+                </tr>
+    
+                <tr>
+                    <th><label for="out_flowrate">out_flowrate:</label></th>
+                    <td><input type="text" name="out_flowrate" required placeholder="Enter out_flowrate"></td>
+                </tr>
+    
+                <tr>
+                    <th><label for="Pressure_out">Pressure_out:</label></th>
+                    <td><input type="text" name="Pressure_out" required placeholder="Enter Pressure_out"></td>
+                </tr>
+            </table>
+    
+            <button type="submit">Predict</button>
+        </form>
+        
+    </center>
+
+</body>
+</html>

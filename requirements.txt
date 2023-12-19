@@ -4,6 +4,3 @@ requests
 python-dotenv
 scikit-learn
 keras
-pandas
-numpy
-pickle

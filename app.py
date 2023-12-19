@@ -3,16 +3,19 @@ import pandas as pd
 import numpy as np
 # import keras
 import pickle
+import joblib
+from keras.models import load_model
+model = load_model('model.h5')
 
 app = Flask(__name__)
 
-with open('model.pkl', 'rb') as file:
-    model = pickle.load(file)
-with open('scaler.pkl', 'rb') as file:
-    scaler = pickle.load(file)
+# with open('model.pkl', 'rb') as file:
+#     model = pickle.load(file)
+# with open('scaler.pkl', 'rb') as file:
+#     scaler = pickle.load(file)
 
 # model = joblib.load('model.joblib')
-# scaler = joblib.load('scaler.joblib')
+scaler = joblib.load('scaler.joblib')
 
 @app.route('/')
 def home():
